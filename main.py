@@ -11,7 +11,7 @@ from uuid import UUID, uuid4
 from fastapi import FastAPI, HTTPException
 
 # 3. Librerías locales
-from user_Model import Genero, Rol, Usuario
+from user_model import Genero, Rol, Usuario
 
 app = FastAPI()
 
@@ -21,29 +21,29 @@ db: List[Usuario] = [
         id=uuid4(),
         nombre="Carlos",
         apellido="Cabrera Fosado",
-        genero=Genero.noBinario,
-        roles=[Rol.admin],
+        genero=Genero.MASCULINO,
+        roles=[Rol.ADMIN],
     ),
     Usuario(
         id=uuid4(),
         nombre="Daniela",
         apellido="León Jimenez",
-        genero=Genero.femenino,
-        roles=[Rol.user],
+        genero=Genero.FEMENINO,
+        roles=[Rol.USER],
     ),
     Usuario(
         id=uuid4(),
         nombre="Tania",
         apellido="Licuados Cabrera",
-        genero=Genero.femenino,
-        roles=[Rol.admin],
+        genero=Genero.FEMENINO,
+        roles=[Rol.ADMIN],
     ),
     Usuario(
         id=uuid4(),
         nombre="Abril",
         apellido="Guzman Pazos",
-        genero=Genero.femenino,
-        roles=[Rol.invitado],
+        genero=Genero.FEMENINO,
+        roles=[Rol.INVITADO],
     ),
 ]
 
